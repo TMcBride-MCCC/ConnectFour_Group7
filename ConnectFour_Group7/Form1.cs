@@ -1,4 +1,11 @@
-﻿using System;
+﻿//========================================================
+//Authors:  Tyler McBride,
+//Date:     4/10/2025
+//Desc:     This program is a connect four game.
+//========================================================
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
