@@ -1,5 +1,5 @@
 ﻿//========================================================
-//Authors:  Tyler McBride,
+//Authors:  Tyler McBride, Dylan Dane
 //Date:     4/10/2025
 //Desc:     This program is a connect four game.
 //========================================================
