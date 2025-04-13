@@ -1,6 +1,6 @@
 ﻿namespace ConnectFour_Group7
 {
-    partial class Form1
+    partial class Welcome
     {
         /// <summary>
         /// Required designer variable.
