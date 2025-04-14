@@ -53,9 +53,9 @@
             this.lbl_welcome_title.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_welcome_title.Location = new System.Drawing.Point(3, 0);
             this.lbl_welcome_title.Name = "lbl_welcome_title";
-            this.lbl_welcome_title.Size = new System.Drawing.Size(243, 50);
+            this.lbl_welcome_title.Size = new System.Drawing.Size(241, 50);
             this.lbl_welcome_title.TabIndex = 2;
-            this.lbl_welcome_title.Text = "Connect Fore";
+            this.lbl_welcome_title.Text = "Connect Four";
             // 
             // btn_welcome_singlePlayer
             // 
