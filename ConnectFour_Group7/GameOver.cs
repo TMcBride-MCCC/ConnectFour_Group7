@@ -12,9 +12,31 @@ namespace ConnectFour_Group7
 {
     public partial class GameOver : Form
     {
-        public GameOver()
+        //Declare a Welcome form variable to point to
+        private Welcome welcomeForm;
+
+        public GameOver(Welcome w)
         {
             InitializeComponent();
+            //Variable to house the form passed for reference later
+            //Needed to return to the Main Menu
+            welcomeForm = w;
+        }
+        //=====================================================================
+        //                              ACTIONS
+        //=====================================================================
+        private void btn_gameOver_exit_Click(object sender, EventArgs e)
+        {
+            //Closes the entire program
+            System.Environment.Exit(0);
+        }
+
+        private void btn_gameOver_returnToMain_Click(object sender, EventArgs e)
+        {
+            //Hide the form
+            this.Close();
+            //Show the Main Menu form
+            welcomeForm.Show();
         }
     }
 }

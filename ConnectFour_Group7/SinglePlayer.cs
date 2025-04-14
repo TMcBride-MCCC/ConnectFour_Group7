@@ -12,9 +12,31 @@ namespace ConnectFour_Group7
 {
     public partial class SinglePlayer : Form
     {
-        public SinglePlayer()
+        //Declare a Welcome form variable to point to
+        private Welcome welcomeForm;
+
+        public SinglePlayer(Welcome w)
         {
             InitializeComponent();
+            //Variable to house the form passed for reference later
+            //Needed to return to the Main Menu
+            welcomeForm = w;
+        }
+        //=====================================================================
+        //                              ACTIONS
+        //=====================================================================
+        private void btn_singlePlayer_exit_Click(object sender, EventArgs e)
+        {
+            //Closes the entire program
+            System.Environment.Exit(0);
+        }
+
+        private void btn_singlePlayer_returnToMain_Click(object sender, EventArgs e)
+        {
+            //Hide the form
+            this.Close();
+            //Show the Main Menu form
+            welcomeForm.Show();
         }
     }
 }
