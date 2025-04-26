@@ -68,4 +68,28 @@ namespace ConnectFour_Group7
             return playerThatFilled;
         }
     }
+
+    //================================================
+    //                      Functions
+    //================================================
+
+    public Color getCellColor()
+        {
+            if(playerThatFilled == "p1")
+            {
+                return Color.Red;
+            }
+            else if(playerThatFilled == "p2")
+            {
+                return Color.Yellow;
+            }
+            else if (playerThatFilled == "ai")
+            {
+                return Color.Yellow;
+            }
+            else
+            {
+                return Color.White;
+            }
+        }
 }
