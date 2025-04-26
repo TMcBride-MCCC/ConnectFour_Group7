@@ -83,7 +83,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(121)))), ((int)(((byte)(233)))));
             this.panel1.Location = new System.Drawing.Point(74, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(654, 362);
+            this.panel1.Size = new System.Drawing.Size(650, 350);
             this.panel1.TabIndex = 8;
             // 
             // SinglePlayer
@@ -99,6 +99,7 @@
             this.Name = "SinglePlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SinglePlayer";
+            this.Load += new System.EventHandler(this.SinglePlayer_Load);
             this.panel_singlePlayer_top.ResumeLayout(false);
             this.panel_singlePlayer_top.PerformLayout();
             this.ResumeLayout(false);

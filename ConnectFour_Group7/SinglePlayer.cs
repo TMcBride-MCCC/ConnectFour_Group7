@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,12 @@ namespace ConnectFour_Group7
         public SinglePlayer(Welcome w)
         {
             InitializeComponent();
+
+            //loads board image
+            string imagePath = Path.Combine(Application.StartupPath, "Resources", "connect4board.png");
+            panel1.BackgroundImage = Image.FromFile(imagePath);
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+
             //Variable to house the form passed for reference later
             //Needed to return to the Main Menu
             welcomeForm = w;
@@ -37,6 +44,11 @@ namespace ConnectFour_Group7
             this.Close();
             //Show the Main Menu form
             welcomeForm.Show();
+        }
+
+        private void SinglePlayer_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
