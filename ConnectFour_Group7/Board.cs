@@ -11,6 +11,8 @@ namespace ConnectFour_Group7
     {
         private const int rows = 6;
         private const int columns = 7;
+        private const int height = 650;
+        private const int width = 350;
         private Cell[,] board;
         
 
