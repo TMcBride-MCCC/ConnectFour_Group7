@@ -11,12 +11,12 @@ namespace ConnectFour_Group7
     {
         private const int rows = 6;
         private const int columns = 7;
-        private Color[,] board;
+        private Cell[,] board;
         
 
         public Board()
         {
-            board = new Color[rows, columns];
+            board = new Cell[rows, columns];
             InitializeBoard();
         }
         private void InitializeBoard()
@@ -25,7 +25,7 @@ namespace ConnectFour_Group7
             {
                 for (int c = 0; c < columns; c++)
                 {
-                    board[r, c] = Color.White;
+                    board[r, c] = new Cell(r, c);
                 }
             }
         }
