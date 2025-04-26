@@ -67,19 +67,18 @@ namespace ConnectFour_Group7
         {
             return playerThatFilled;
         }
-    }
 
-    //================================================
-    //                      Functions
-    //================================================
+        //================================================
+        //                      Functions
+        //================================================
 
-    public Color getCellColor(string p)
+        public Color getCellColor(string p)
         {
-            if(p == "p1")
+            if (p == "p1")
             {
                 return Color.Red;
             }
-            else if(p == "p2")
+            else if (p == "p2")
             {
                 return Color.Yellow;
             }
@@ -93,4 +92,5 @@ namespace ConnectFour_Group7
             }
 
         }
+    }
 }
