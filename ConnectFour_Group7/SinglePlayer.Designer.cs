@@ -40,7 +40,11 @@
             this.lbl_singlePlayer_slot5 = new System.Windows.Forms.Button();
             this.lbl_singlePlayer_slot6 = new System.Windows.Forms.Button();
             this.lbl_singlePlayer_slot7 = new System.Windows.Forms.Button();
+            this.ss_singlePlayer_status = new System.Windows.Forms.StatusStrip();
+            this.tssl_singlePlayer_p1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssl_singlePlayer_p2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel_singlePlayer_top.SuspendLayout();
+            this.ss_singlePlayer_status.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_singlePlayer_title
@@ -158,12 +162,43 @@
             this.lbl_singlePlayer_slot7.Text = "SLOT 7";
             this.lbl_singlePlayer_slot7.UseVisualStyleBackColor = true;
             // 
+            // ss_singlePlayer_status
+            // 
+            this.ss_singlePlayer_status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssl_singlePlayer_p1,
+            this.tssl_singlePlayer_p2});
+            this.ss_singlePlayer_status.Location = new System.Drawing.Point(0, 578);
+            this.ss_singlePlayer_status.Name = "ss_singlePlayer_status";
+            this.ss_singlePlayer_status.Size = new System.Drawing.Size(800, 22);
+            this.ss_singlePlayer_status.TabIndex = 16;
+            this.ss_singlePlayer_status.Text = "statusStrip1";
+            // 
+            // tssl_singlePlayer_p1
+            // 
+            this.tssl_singlePlayer_p1.BackColor = System.Drawing.Color.Red;
+            this.tssl_singlePlayer_p1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tssl_singlePlayer_p1.ForeColor = System.Drawing.Color.Black;
+            this.tssl_singlePlayer_p1.Name = "tssl_singlePlayer_p1";
+            this.tssl_singlePlayer_p1.Size = new System.Drawing.Size(87, 17);
+            this.tssl_singlePlayer_p1.Text = "Player 1\'s Turn";
+            this.tssl_singlePlayer_p1.Visible = false;
+            // 
+            // tssl_singlePlayer_p2
+            // 
+            this.tssl_singlePlayer_p2.BackColor = System.Drawing.Color.Yellow;
+            this.tssl_singlePlayer_p2.ForeColor = System.Drawing.Color.Black;
+            this.tssl_singlePlayer_p2.Name = "tssl_singlePlayer_p2";
+            this.tssl_singlePlayer_p2.Size = new System.Drawing.Size(84, 17);
+            this.tssl_singlePlayer_p2.Text = "Player 2\'s Turn";
+            this.tssl_singlePlayer_p2.Visible = false;
+            // 
             // SinglePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 582);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.ss_singlePlayer_status);
             this.Controls.Add(this.lbl_singlePlayer_slot7);
             this.Controls.Add(this.lbl_singlePlayer_slot6);
             this.Controls.Add(this.lbl_singlePlayer_slot5);
@@ -178,10 +213,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SinglePlayer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SinglePlayer";
             this.panel_singlePlayer_top.ResumeLayout(false);
             this.panel_singlePlayer_top.PerformLayout();
+            this.ss_singlePlayer_status.ResumeLayout(false);
+            this.ss_singlePlayer_status.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -199,5 +236,8 @@
         private System.Windows.Forms.Button lbl_singlePlayer_slot5;
         private System.Windows.Forms.Button lbl_singlePlayer_slot6;
         private System.Windows.Forms.Button lbl_singlePlayer_slot7;
+        private System.Windows.Forms.StatusStrip ss_singlePlayer_status;
+        private System.Windows.Forms.ToolStripStatusLabel tssl_singlePlayer_p1;
+        private System.Windows.Forms.ToolStripStatusLabel tssl_singlePlayer_p2;
     }
 }
