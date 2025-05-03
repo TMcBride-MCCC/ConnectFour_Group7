@@ -15,20 +15,29 @@ namespace ConnectFour_Group7
     {
         //Declare a Welcome form variable to point to
         private Welcome welcomeForm;
+        //Make a Board varialbe to point to
+        private Board board;
 
         public SinglePlayer(Welcome w)
         {
             InitializeComponent();
 
+            //Initialize the board
+            board = new Board();
+
             //loads board image
             string imagePath = Path.Combine(Application.StartupPath, "Resources", "connect4board.png");
-            panel1.BackgroundImage = Image.FromFile(imagePath);
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel_singlePlayer_boardPanel.BackgroundImage = Image.FromFile(imagePath);
+            panel_singlePlayer_boardPanel.BackgroundImageLayout = ImageLayout.Stretch;
 
             //Variable to house the form passed for reference later
             //Needed to return to the Main Menu
             welcomeForm = w;
         }
+        //=====================================================================
+        //                              FUNCTIONS
+        //=====================================================================
+
         //=====================================================================
         //                              ACTIONS
         //=====================================================================
@@ -49,6 +58,11 @@ namespace ConnectFour_Group7
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel_singlePlayer_boardPanel_Paint(object sender, PaintEventArgs e)
+        {
+            board.Draw(e.Graphics, panel_singlePlayer_boardPanel.Width, panel_singlePlayer_boardPanel.Height);
         }
     }
 }

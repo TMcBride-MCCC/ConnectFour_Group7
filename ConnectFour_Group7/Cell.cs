@@ -72,17 +72,13 @@ namespace ConnectFour_Group7
         //                      Functions
         //================================================
 
-        public Color getCellColor(string p)
+        public Color CellColor()
         {
-            if (p == "p1")
+            if (playerThatFilled == "p1")
             {
                 return Color.Red;
             }
-            else if (p == "p2")
-            {
-                return Color.Yellow;
-            }
-            else if (p == "ai")
+            else if (playerThatFilled == "p2" || playerThatFilled == "ai")
             {
                 return Color.Yellow;
             }
