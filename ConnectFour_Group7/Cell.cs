@@ -84,7 +84,7 @@ namespace ConnectFour_Group7
             }
             else
             {
-                return Color.White;
+                return SystemColors.ActiveCaption;
             }
 
         }

@@ -15,7 +15,7 @@ namespace ConnectFour_Group7
         private const int marginTop = 25;
         private const int marginBottom = 25;
         private Cell[,] board;
-        
+
 
         public Board()
         {
@@ -35,8 +35,8 @@ namespace ConnectFour_Group7
         public void Draw(Graphics g, int panelWidth, int panelHeight)
         {
             int boardDrawHeight = panelHeight - marginTop - marginBottom;
-            int cellWidth = panelWidth/columns;
-            int cellHeight = boardDrawHeight/rows;
+            int cellWidth = panelWidth / columns;
+            int cellHeight = boardDrawHeight / rows;
 
             int offsetX = (panelWidth - (cellWidth * columns)) / 2;
             int offsetY = marginTop;
@@ -59,14 +59,23 @@ namespace ConnectFour_Group7
                     Rectangle circleContainer = new Rectangle(centerXVal, centerYVal, circleSize, circleSize);
 
                     //TESTING
-                   g.DrawEllipse(Pens.Black, circleContainer);
-                    fillTest();
+                    g.DrawEllipse(Pens.Black, circleContainer);
+                    // fillTest();
 
                     //Draw filled piece
                     if (!cell.isEmptyCell())
                     {
+                        Console.WriteLine("Filling NonEmpty Cell");
                         Brush fillColor = new SolidBrush(cell.CellColor());
                         g.FillEllipse(fillColor, circleContainer);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Filling Empty Cell");
+                        Brush fillColor = new SolidBrush(cell.CellColor());
+                        g.FillEllipse(fillColor, circleContainer);
+                        board[r, c].setPlayerThatFilled("");
+                        board[r, c].setIsEmpty(false);
                     }
                 }
             }
@@ -78,7 +87,7 @@ namespace ConnectFour_Group7
             {
                 for (int c = 0; c < columns; c++)
                 {
-                    board[r, c].setPlayerThatFilled("p1");
+                    board[r, c].setPlayerThatFilled("");
                     board[r, c].setIsEmpty(false);
                 }
             }
