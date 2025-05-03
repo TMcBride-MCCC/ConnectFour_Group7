@@ -28,62 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_versus_title = new System.Windows.Forms.Label();
-            this.btn_versus_exit = new System.Windows.Forms.Button();
-            this.btn_versus_returnToMain = new System.Windows.Forms.Button();
+            this.panel_singlePlayer_top = new System.Windows.Forms.Panel();
+            this.lbl_singlePlayer_title = new System.Windows.Forms.Label();
+            this.lbl_versus_slot7 = new System.Windows.Forms.Button();
+            this.lbl_versus_slot6 = new System.Windows.Forms.Button();
+            this.lbl_versus_slot5 = new System.Windows.Forms.Button();
+            this.lbl_versus_slot4 = new System.Windows.Forms.Button();
+            this.lbl_versus_slot3 = new System.Windows.Forms.Button();
+            this.lbl_versus_slot2 = new System.Windows.Forms.Button();
+            this.lbl_versus_slot1 = new System.Windows.Forms.Button();
+            this.panel_singlePlayer_boardPanel = new System.Windows.Forms.Panel();
+            this.btn_singlePlayer_returnToMain = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_exit = new System.Windows.Forms.Button();
+            this.panel_singlePlayer_top.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl_versus_title
+            // panel_singlePlayer_top
             // 
-            this.lbl_versus_title.AutoSize = true;
-            this.lbl_versus_title.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_versus_title.Location = new System.Drawing.Point(360, 9);
-            this.lbl_versus_title.Name = "lbl_versus_title";
-            this.lbl_versus_title.Size = new System.Drawing.Size(78, 50);
-            this.lbl_versus_title.TabIndex = 4;
-            this.lbl_versus_title.Text = "Vs.";
+            this.panel_singlePlayer_top.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel_singlePlayer_top.Controls.Add(this.lbl_singlePlayer_title);
+            this.panel_singlePlayer_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_singlePlayer_top.Location = new System.Drawing.Point(0, 0);
+            this.panel_singlePlayer_top.Name = "panel_singlePlayer_top";
+            this.panel_singlePlayer_top.Size = new System.Drawing.Size(800, 52);
+            this.panel_singlePlayer_top.TabIndex = 8;
             // 
-            // btn_versus_exit
+            // lbl_singlePlayer_title
             // 
-            this.btn_versus_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_versus_exit.Location = new System.Drawing.Point(614, 397);
-            this.btn_versus_exit.Name = "btn_versus_exit";
-            this.btn_versus_exit.Size = new System.Drawing.Size(174, 41);
-            this.btn_versus_exit.TabIndex = 5;
-            this.btn_versus_exit.Text = "Exit";
-            this.btn_versus_exit.UseVisualStyleBackColor = true;
-            this.btn_versus_exit.Click += new System.EventHandler(this.btn_versus_exit_Click);
+            this.lbl_singlePlayer_title.AutoSize = true;
+            this.lbl_singlePlayer_title.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_singlePlayer_title.Location = new System.Drawing.Point(3, 0);
+            this.lbl_singlePlayer_title.Name = "lbl_singlePlayer_title";
+            this.lbl_singlePlayer_title.Size = new System.Drawing.Size(135, 50);
+            this.lbl_singlePlayer_title.TabIndex = 3;
+            this.lbl_singlePlayer_title.Text = "Versus";
             // 
-            // btn_versus_returnToMain
+            // lbl_versus_slot7
             // 
-            this.btn_versus_returnToMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_versus_returnToMain.Location = new System.Drawing.Point(614, 350);
-            this.btn_versus_returnToMain.Name = "btn_versus_returnToMain";
-            this.btn_versus_returnToMain.Size = new System.Drawing.Size(174, 41);
-            this.btn_versus_returnToMain.TabIndex = 7;
-            this.btn_versus_returnToMain.Text = "Main Menu";
-            this.btn_versus_returnToMain.UseVisualStyleBackColor = true;
-            this.btn_versus_returnToMain.Click += new System.EventHandler(this.btn_versus_returnToMain_Click);
+            this.lbl_versus_slot7.Location = new System.Drawing.Point(647, 58);
+            this.lbl_versus_slot7.Name = "lbl_versus_slot7";
+            this.lbl_versus_slot7.Size = new System.Drawing.Size(57, 30);
+            this.lbl_versus_slot7.TabIndex = 25;
+            this.lbl_versus_slot7.Text = "SLOT 7";
+            this.lbl_versus_slot7.UseVisualStyleBackColor = true;
+            // 
+            // lbl_versus_slot6
+            // 
+            this.lbl_versus_slot6.Location = new System.Drawing.Point(556, 58);
+            this.lbl_versus_slot6.Name = "lbl_versus_slot6";
+            this.lbl_versus_slot6.Size = new System.Drawing.Size(57, 30);
+            this.lbl_versus_slot6.TabIndex = 24;
+            this.lbl_versus_slot6.Text = "SLOT 6";
+            this.lbl_versus_slot6.UseVisualStyleBackColor = true;
+            // 
+            // lbl_versus_slot5
+            // 
+            this.lbl_versus_slot5.Location = new System.Drawing.Point(462, 58);
+            this.lbl_versus_slot5.Name = "lbl_versus_slot5";
+            this.lbl_versus_slot5.Size = new System.Drawing.Size(57, 30);
+            this.lbl_versus_slot5.TabIndex = 23;
+            this.lbl_versus_slot5.Text = "SLOT 5";
+            this.lbl_versus_slot5.UseVisualStyleBackColor = true;
+            // 
+            // lbl_versus_slot4
+            // 
+            this.lbl_versus_slot4.Location = new System.Drawing.Point(370, 58);
+            this.lbl_versus_slot4.Name = "lbl_versus_slot4";
+            this.lbl_versus_slot4.Size = new System.Drawing.Size(57, 30);
+            this.lbl_versus_slot4.TabIndex = 22;
+            this.lbl_versus_slot4.Text = "SLOT 4";
+            this.lbl_versus_slot4.UseVisualStyleBackColor = true;
+            // 
+            // lbl_versus_slot3
+            // 
+            this.lbl_versus_slot3.Location = new System.Drawing.Point(277, 58);
+            this.lbl_versus_slot3.Name = "lbl_versus_slot3";
+            this.lbl_versus_slot3.Size = new System.Drawing.Size(57, 30);
+            this.lbl_versus_slot3.TabIndex = 21;
+            this.lbl_versus_slot3.Text = "SLOT 3";
+            this.lbl_versus_slot3.UseVisualStyleBackColor = true;
+            // 
+            // lbl_versus_slot2
+            // 
+            this.lbl_versus_slot2.Location = new System.Drawing.Point(187, 58);
+            this.lbl_versus_slot2.Name = "lbl_versus_slot2";
+            this.lbl_versus_slot2.Size = new System.Drawing.Size(57, 30);
+            this.lbl_versus_slot2.TabIndex = 20;
+            this.lbl_versus_slot2.Text = "SLOT 2";
+            this.lbl_versus_slot2.UseVisualStyleBackColor = true;
+            // 
+            // lbl_versus_slot1
+            // 
+            this.lbl_versus_slot1.Location = new System.Drawing.Point(94, 58);
+            this.lbl_versus_slot1.Name = "lbl_versus_slot1";
+            this.lbl_versus_slot1.Size = new System.Drawing.Size(57, 30);
+            this.lbl_versus_slot1.TabIndex = 19;
+            this.lbl_versus_slot1.Text = "SLOT 1";
+            this.lbl_versus_slot1.UseVisualStyleBackColor = true;
+            // 
+            // panel_singlePlayer_boardPanel
+            // 
+            this.panel_singlePlayer_boardPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(121)))), ((int)(((byte)(233)))));
+            this.panel_singlePlayer_boardPanel.Location = new System.Drawing.Point(74, 94);
+            this.panel_singlePlayer_boardPanel.Name = "panel_singlePlayer_boardPanel";
+            this.panel_singlePlayer_boardPanel.Size = new System.Drawing.Size(650, 350);
+            this.panel_singlePlayer_boardPanel.TabIndex = 18;
+            this.panel_singlePlayer_boardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_singlePlayer_boardPanel_Paint_1);
+            // 
+            // btn_singlePlayer_returnToMain
+            // 
+            this.btn_singlePlayer_returnToMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_singlePlayer_returnToMain.Location = new System.Drawing.Point(614, 486);
+            this.btn_singlePlayer_returnToMain.Name = "btn_singlePlayer_returnToMain";
+            this.btn_singlePlayer_returnToMain.Size = new System.Drawing.Size(174, 41);
+            this.btn_singlePlayer_returnToMain.TabIndex = 17;
+            this.btn_singlePlayer_returnToMain.Text = "Main Menu";
+            this.btn_singlePlayer_returnToMain.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_returnToMain.Click += new System.EventHandler(this.btn_singlePlayer_returnToMain_Click_1);
+            // 
+            // btn_singlePlayer_exit
+            // 
+            this.btn_singlePlayer_exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_singlePlayer_exit.Location = new System.Drawing.Point(614, 533);
+            this.btn_singlePlayer_exit.Name = "btn_singlePlayer_exit";
+            this.btn_singlePlayer_exit.Size = new System.Drawing.Size(174, 41);
+            this.btn_singlePlayer_exit.TabIndex = 16;
+            this.btn_singlePlayer_exit.Text = "Exit";
+            this.btn_singlePlayer_exit.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_exit.Click += new System.EventHandler(this.btn_singlePlayer_exit_Click_1);
             // 
             // Versus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_versus_returnToMain);
-            this.Controls.Add(this.btn_versus_exit);
-            this.Controls.Add(this.lbl_versus_title);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(800, 582);
+            this.Controls.Add(this.lbl_versus_slot7);
+            this.Controls.Add(this.lbl_versus_slot6);
+            this.Controls.Add(this.lbl_versus_slot5);
+            this.Controls.Add(this.lbl_versus_slot4);
+            this.Controls.Add(this.lbl_versus_slot3);
+            this.Controls.Add(this.lbl_versus_slot2);
+            this.Controls.Add(this.lbl_versus_slot1);
+            this.Controls.Add(this.panel_singlePlayer_boardPanel);
+            this.Controls.Add(this.btn_singlePlayer_returnToMain);
+            this.Controls.Add(this.btn_singlePlayer_exit);
+            this.Controls.Add(this.panel_singlePlayer_top);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Versus";
             this.Text = "Versus";
+            this.panel_singlePlayer_top.ResumeLayout(false);
+            this.panel_singlePlayer_top.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_versus_title;
-        private System.Windows.Forms.Button btn_versus_exit;
-        private System.Windows.Forms.Button btn_versus_returnToMain;
+        private System.Windows.Forms.Panel panel_singlePlayer_top;
+        private System.Windows.Forms.Label lbl_singlePlayer_title;
+        private System.Windows.Forms.Button lbl_versus_slot7;
+        private System.Windows.Forms.Button lbl_versus_slot6;
+        private System.Windows.Forms.Button lbl_versus_slot5;
+        private System.Windows.Forms.Button lbl_versus_slot4;
+        private System.Windows.Forms.Button lbl_versus_slot3;
+        private System.Windows.Forms.Button lbl_versus_slot2;
+        private System.Windows.Forms.Button lbl_versus_slot1;
+        private System.Windows.Forms.Panel panel_singlePlayer_boardPanel;
+        private System.Windows.Forms.Button btn_singlePlayer_returnToMain;
+        private System.Windows.Forms.Button btn_singlePlayer_exit;
     }
 }
