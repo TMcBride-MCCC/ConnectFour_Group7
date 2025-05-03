@@ -59,8 +59,8 @@ namespace ConnectFour_Group7
                     Rectangle circleContainer = new Rectangle(centerXVal, centerYVal, circleSize, circleSize);
 
                     //TESTING
-                    //g.DrawEllipse(Pens.Black, circleContainer);
-                    //fillTest();
+                   g.DrawEllipse(Pens.Black, circleContainer);
+                    fillTest();
 
                     //Draw filled piece
                     if (!cell.isEmptyCell())

@@ -26,7 +26,7 @@ namespace ConnectFour_Group7
             board = new Board();
 
             //loads board image
-            string imagePath = Path.Combine(Application.StartupPath, "Resources", "connect4board.png");
+            string imagePath = Path.Combine(Application.StartupPath, "Resources", "BoardBG.jpg");
             panel_singlePlayer_boardPanel.BackgroundImage = Image.FromFile(imagePath);
             panel_singlePlayer_boardPanel.BackgroundImageLayout = ImageLayout.Stretch;
 

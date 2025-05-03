@@ -122,6 +122,9 @@
     <None Include="Resources\white_circle.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\BoardBG.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\connect4board.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
