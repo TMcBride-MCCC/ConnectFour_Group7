@@ -19,7 +19,7 @@ namespace ConnectFour_Group7
         //Make a Board varialbe to point to
         private Board board;
         private int turnCounter = 1;
-        public Versus(Welcome w)
+        public Versus(Welcome wf)
         {
             InitializeComponent();
 
@@ -33,7 +33,7 @@ namespace ConnectFour_Group7
 
             //Variable to house the form passed for reference later
             //Needed to return to the Main Menu
-            welcomeForm = w;
+            welcomeForm = wf;
             //Set the turn
             whoseTurnIsIt(turnCounter);
         }
@@ -268,9 +268,16 @@ namespace ConnectFour_Group7
                 {
                     //Temporary display that this function is working
                     //After we determine it is working this will be replaced with a form
-                    MessageBox.Show(player + " Won!");
+                    //MessageBox.Show(player + " Won!");
                     //Disable all buttons
                     disableButtons();
+                    //Make an instance of the Versus Form to point to
+                    //Pass it this form to come back to
+                    GameOver gameOverForm = new GameOver(board, player, welcomeForm);
+                    //Show the Versus form
+                    gameOverForm.Show();
+                    //Hide the main form
+                    this.Hide();
                 }
                 else
                 {

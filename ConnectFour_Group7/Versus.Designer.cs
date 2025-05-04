@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel_singlePlayer_top = new System.Windows.Forms.Panel();
-            this.lbl_singlePlayer_title = new System.Windows.Forms.Label();
+            this.panel_versus_top = new System.Windows.Forms.Panel();
+            this.lbl_versus_title = new System.Windows.Forms.Label();
             this.btn_versus_slot7 = new System.Windows.Forms.Button();
             this.btn_versus_slot6 = new System.Windows.Forms.Button();
             this.btn_versus_slot5 = new System.Windows.Forms.Button();
@@ -43,29 +43,29 @@
             this.ss_versus_status = new System.Windows.Forms.StatusStrip();
             this.tssl_versus_p1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssl_versus_p2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.panel_singlePlayer_top.SuspendLayout();
+            this.panel_versus_top.SuspendLayout();
             this.ss_versus_status.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel_singlePlayer_top
+            // panel_versus_top
             // 
-            this.panel_singlePlayer_top.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel_singlePlayer_top.Controls.Add(this.lbl_singlePlayer_title);
-            this.panel_singlePlayer_top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_singlePlayer_top.Location = new System.Drawing.Point(0, 0);
-            this.panel_singlePlayer_top.Name = "panel_singlePlayer_top";
-            this.panel_singlePlayer_top.Size = new System.Drawing.Size(800, 52);
-            this.panel_singlePlayer_top.TabIndex = 8;
+            this.panel_versus_top.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel_versus_top.Controls.Add(this.lbl_versus_title);
+            this.panel_versus_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_versus_top.Location = new System.Drawing.Point(0, 0);
+            this.panel_versus_top.Name = "panel_versus_top";
+            this.panel_versus_top.Size = new System.Drawing.Size(800, 52);
+            this.panel_versus_top.TabIndex = 8;
             // 
-            // lbl_singlePlayer_title
+            // lbl_versus_title
             // 
-            this.lbl_singlePlayer_title.AutoSize = true;
-            this.lbl_singlePlayer_title.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_singlePlayer_title.Location = new System.Drawing.Point(3, 0);
-            this.lbl_singlePlayer_title.Name = "lbl_singlePlayer_title";
-            this.lbl_singlePlayer_title.Size = new System.Drawing.Size(135, 50);
-            this.lbl_singlePlayer_title.TabIndex = 3;
-            this.lbl_singlePlayer_title.Text = "Versus";
+            this.lbl_versus_title.AutoSize = true;
+            this.lbl_versus_title.Font = new System.Drawing.Font("Comic Sans MS", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_versus_title.Location = new System.Drawing.Point(3, 0);
+            this.lbl_versus_title.Name = "lbl_versus_title";
+            this.lbl_versus_title.Size = new System.Drawing.Size(135, 50);
+            this.lbl_versus_title.TabIndex = 3;
+            this.lbl_versus_title.Text = "Versus";
             // 
             // btn_versus_slot7
             // 
@@ -198,7 +198,7 @@
             this.tssl_versus_p2.BackColor = System.Drawing.Color.Yellow;
             this.tssl_versus_p2.ForeColor = System.Drawing.Color.Black;
             this.tssl_versus_p2.Name = "tssl_versus_p2";
-            this.tssl_versus_p2.Size = new System.Drawing.Size(83, 17);
+            this.tssl_versus_p2.Size = new System.Drawing.Size(84, 17);
             this.tssl_versus_p2.Text = "Player 2\'s Turn";
             this.tssl_versus_p2.Visible = false;
             // 
@@ -219,13 +219,13 @@
             this.Controls.Add(this.panel_versus_boardPanel);
             this.Controls.Add(this.btn_singlePlayer_returnToMain);
             this.Controls.Add(this.btn_singlePlayer_exit);
-            this.Controls.Add(this.panel_singlePlayer_top);
+            this.Controls.Add(this.panel_versus_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Versus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Versus";
-            this.panel_singlePlayer_top.ResumeLayout(false);
-            this.panel_singlePlayer_top.PerformLayout();
+            this.panel_versus_top.ResumeLayout(false);
+            this.panel_versus_top.PerformLayout();
             this.ss_versus_status.ResumeLayout(false);
             this.ss_versus_status.PerformLayout();
             this.ResumeLayout(false);
@@ -234,8 +234,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel_singlePlayer_top;
-        private System.Windows.Forms.Label lbl_singlePlayer_title;
+        private System.Windows.Forms.Panel panel_versus_top;
+        private System.Windows.Forms.Label lbl_versus_title;
         private System.Windows.Forms.Button btn_versus_slot7;
         private System.Windows.Forms.Button btn_versus_slot6;
         private System.Windows.Forms.Button btn_versus_slot5;
