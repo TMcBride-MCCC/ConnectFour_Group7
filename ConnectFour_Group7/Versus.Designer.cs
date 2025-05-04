@@ -40,7 +40,11 @@
             this.panel_versus_boardPanel = new System.Windows.Forms.Panel();
             this.btn_singlePlayer_returnToMain = new System.Windows.Forms.Button();
             this.btn_singlePlayer_exit = new System.Windows.Forms.Button();
+            this.ss_versus_status = new System.Windows.Forms.StatusStrip();
+            this.tssl_versus_p1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tssl_versus_p2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel_singlePlayer_top.SuspendLayout();
+            this.ss_versus_status.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_singlePlayer_top
@@ -71,6 +75,7 @@
             this.btn_versus_slot7.TabIndex = 25;
             this.btn_versus_slot7.Text = "SLOT 7";
             this.btn_versus_slot7.UseVisualStyleBackColor = true;
+            this.btn_versus_slot7.Click += new System.EventHandler(this.slotButtonClicked);
             // 
             // btn_versus_slot6
             // 
@@ -80,6 +85,7 @@
             this.btn_versus_slot6.TabIndex = 24;
             this.btn_versus_slot6.Text = "SLOT 6";
             this.btn_versus_slot6.UseVisualStyleBackColor = true;
+            this.btn_versus_slot6.Click += new System.EventHandler(this.slotButtonClicked);
             // 
             // btn_versus_slot5
             // 
@@ -89,6 +95,7 @@
             this.btn_versus_slot5.TabIndex = 23;
             this.btn_versus_slot5.Text = "SLOT 5";
             this.btn_versus_slot5.UseVisualStyleBackColor = true;
+            this.btn_versus_slot5.Click += new System.EventHandler(this.slotButtonClicked);
             // 
             // btn_versus_slot4
             // 
@@ -98,6 +105,7 @@
             this.btn_versus_slot4.TabIndex = 22;
             this.btn_versus_slot4.Text = "SLOT 4";
             this.btn_versus_slot4.UseVisualStyleBackColor = true;
+            this.btn_versus_slot4.Click += new System.EventHandler(this.slotButtonClicked);
             // 
             // btn_versus_slot3
             // 
@@ -107,6 +115,7 @@
             this.btn_versus_slot3.TabIndex = 21;
             this.btn_versus_slot3.Text = "SLOT 3";
             this.btn_versus_slot3.UseVisualStyleBackColor = true;
+            this.btn_versus_slot3.Click += new System.EventHandler(this.slotButtonClicked);
             // 
             // btn_versus_slot2
             // 
@@ -116,6 +125,7 @@
             this.btn_versus_slot2.TabIndex = 20;
             this.btn_versus_slot2.Text = "SLOT 2";
             this.btn_versus_slot2.UseVisualStyleBackColor = true;
+            this.btn_versus_slot2.Click += new System.EventHandler(this.slotButtonClicked);
             this.btn_versus_slot2.MouseLeave += new System.EventHandler(this.leaveHover);
             this.btn_versus_slot2.MouseHover += new System.EventHandler(this.hover);
             // 
@@ -127,6 +137,7 @@
             this.btn_versus_slot1.TabIndex = 19;
             this.btn_versus_slot1.Text = "SLOT 1";
             this.btn_versus_slot1.UseVisualStyleBackColor = true;
+            this.btn_versus_slot1.Click += new System.EventHandler(this.slotButtonClicked);
             this.btn_versus_slot1.MouseLeave += new System.EventHandler(this.leaveHover);
             this.btn_versus_slot1.MouseHover += new System.EventHandler(this.hover);
             // 
@@ -137,7 +148,7 @@
             this.panel_versus_boardPanel.Name = "panel_versus_boardPanel";
             this.panel_versus_boardPanel.Size = new System.Drawing.Size(650, 350);
             this.panel_versus_boardPanel.TabIndex = 18;
-            this.panel_versus_boardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_singlePlayer_boardPanel_Paint_1);
+            this.panel_versus_boardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_versus_boardPanel_Paint_1);
             // 
             // btn_singlePlayer_returnToMain
             // 
@@ -148,7 +159,7 @@
             this.btn_singlePlayer_returnToMain.TabIndex = 17;
             this.btn_singlePlayer_returnToMain.Text = "Main Menu";
             this.btn_singlePlayer_returnToMain.UseVisualStyleBackColor = true;
-            this.btn_singlePlayer_returnToMain.Click += new System.EventHandler(this.btn_singlePlayer_returnToMain_Click_1);
+            this.btn_singlePlayer_returnToMain.Click += new System.EventHandler(this.btn_versus_returnToMain_Click_1);
             // 
             // btn_singlePlayer_exit
             // 
@@ -159,14 +170,45 @@
             this.btn_singlePlayer_exit.TabIndex = 16;
             this.btn_singlePlayer_exit.Text = "Exit";
             this.btn_singlePlayer_exit.UseVisualStyleBackColor = true;
-            this.btn_singlePlayer_exit.Click += new System.EventHandler(this.btn_singlePlayer_exit_Click_1);
+            this.btn_singlePlayer_exit.Click += new System.EventHandler(this.btn_versus_exit_Click_1);
+            // 
+            // ss_versus_status
+            // 
+            this.ss_versus_status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssl_versus_p1,
+            this.tssl_versus_p2});
+            this.ss_versus_status.Location = new System.Drawing.Point(0, 578);
+            this.ss_versus_status.Name = "ss_versus_status";
+            this.ss_versus_status.Size = new System.Drawing.Size(800, 22);
+            this.ss_versus_status.TabIndex = 26;
+            this.ss_versus_status.Text = "statusStrip1";
+            // 
+            // tssl_versus_p1
+            // 
+            this.tssl_versus_p1.BackColor = System.Drawing.Color.Red;
+            this.tssl_versus_p1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tssl_versus_p1.ForeColor = System.Drawing.Color.Black;
+            this.tssl_versus_p1.Name = "tssl_versus_p1";
+            this.tssl_versus_p1.Size = new System.Drawing.Size(87, 17);
+            this.tssl_versus_p1.Text = "Player 1\'s Turn";
+            this.tssl_versus_p1.Visible = false;
+            // 
+            // tssl_versus_p2
+            // 
+            this.tssl_versus_p2.BackColor = System.Drawing.Color.Yellow;
+            this.tssl_versus_p2.ForeColor = System.Drawing.Color.Black;
+            this.tssl_versus_p2.Name = "tssl_versus_p2";
+            this.tssl_versus_p2.Size = new System.Drawing.Size(83, 17);
+            this.tssl_versus_p2.Text = "Player 2\'s Turn";
+            this.tssl_versus_p2.Visible = false;
             // 
             // Versus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 582);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.ss_versus_status);
             this.Controls.Add(this.btn_versus_slot7);
             this.Controls.Add(this.btn_versus_slot6);
             this.Controls.Add(this.btn_versus_slot5);
@@ -183,7 +225,10 @@
             this.Text = "Versus";
             this.panel_singlePlayer_top.ResumeLayout(false);
             this.panel_singlePlayer_top.PerformLayout();
+            this.ss_versus_status.ResumeLayout(false);
+            this.ss_versus_status.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -200,5 +245,8 @@
         private System.Windows.Forms.Panel panel_versus_boardPanel;
         private System.Windows.Forms.Button btn_singlePlayer_returnToMain;
         private System.Windows.Forms.Button btn_singlePlayer_exit;
+        private System.Windows.Forms.StatusStrip ss_versus_status;
+        private System.Windows.Forms.ToolStripStatusLabel tssl_versus_p1;
+        private System.Windows.Forms.ToolStripStatusLabel tssl_versus_p2;
     }
 }
