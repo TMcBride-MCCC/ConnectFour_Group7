@@ -33,13 +33,13 @@
             this.btn_singlePlayer_returnToMain = new System.Windows.Forms.Button();
             this.panel_singlePlayer_top = new System.Windows.Forms.Panel();
             this.panel_singlePlayer_boardPanel = new System.Windows.Forms.Panel();
-            this.lbl_singlePlayer_slot1 = new System.Windows.Forms.Button();
-            this.lbl_singlePlayer_slot2 = new System.Windows.Forms.Button();
-            this.lbl_singlePlayer_slot3 = new System.Windows.Forms.Button();
-            this.lbl_singlePlayer_slot4 = new System.Windows.Forms.Button();
-            this.lbl_singlePlayer_slot5 = new System.Windows.Forms.Button();
-            this.lbl_singlePlayer_slot6 = new System.Windows.Forms.Button();
-            this.lbl_singlePlayer_slot7 = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_slot1 = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_slot2 = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_slot3 = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_slot4 = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_slot5 = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_slot6 = new System.Windows.Forms.Button();
+            this.btn_singlePlayer_slot7 = new System.Windows.Forms.Button();
             this.ss_singlePlayer_status = new System.Windows.Forms.StatusStrip();
             this.tssl_singlePlayer_p1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tssl_singlePlayer_p2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -98,69 +98,69 @@
             this.panel_singlePlayer_boardPanel.TabIndex = 8;
             this.panel_singlePlayer_boardPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_singlePlayer_boardPanel_Paint);
             // 
-            // lbl_singlePlayer_slot1
+            // btn_singlePlayer_slot1
             // 
-            this.lbl_singlePlayer_slot1.Location = new System.Drawing.Point(94, 58);
-            this.lbl_singlePlayer_slot1.Name = "lbl_singlePlayer_slot1";
-            this.lbl_singlePlayer_slot1.Size = new System.Drawing.Size(57, 30);
-            this.lbl_singlePlayer_slot1.TabIndex = 9;
-            this.lbl_singlePlayer_slot1.Text = "SLOT 1";
-            this.lbl_singlePlayer_slot1.UseVisualStyleBackColor = true;
-            this.lbl_singlePlayer_slot1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_singlePlayer_slot1.Location = new System.Drawing.Point(94, 58);
+            this.btn_singlePlayer_slot1.Name = "btn_singlePlayer_slot1";
+            this.btn_singlePlayer_slot1.Size = new System.Drawing.Size(57, 30);
+            this.btn_singlePlayer_slot1.TabIndex = 9;
+            this.btn_singlePlayer_slot1.Text = "SLOT 1";
+            this.btn_singlePlayer_slot1.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot1.Click += new System.EventHandler(this.slotButtonClicked);
             // 
-            // lbl_singlePlayer_slot2
+            // btn_singlePlayer_slot2
             // 
-            this.lbl_singlePlayer_slot2.Location = new System.Drawing.Point(187, 58);
-            this.lbl_singlePlayer_slot2.Name = "lbl_singlePlayer_slot2";
-            this.lbl_singlePlayer_slot2.Size = new System.Drawing.Size(57, 30);
-            this.lbl_singlePlayer_slot2.TabIndex = 10;
-            this.lbl_singlePlayer_slot2.Text = "SLOT 2";
-            this.lbl_singlePlayer_slot2.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot2.Location = new System.Drawing.Point(187, 58);
+            this.btn_singlePlayer_slot2.Name = "btn_singlePlayer_slot2";
+            this.btn_singlePlayer_slot2.Size = new System.Drawing.Size(57, 30);
+            this.btn_singlePlayer_slot2.TabIndex = 10;
+            this.btn_singlePlayer_slot2.Text = "SLOT 2";
+            this.btn_singlePlayer_slot2.UseVisualStyleBackColor = true;
             // 
-            // lbl_singlePlayer_slot3
+            // btn_singlePlayer_slot3
             // 
-            this.lbl_singlePlayer_slot3.Location = new System.Drawing.Point(277, 58);
-            this.lbl_singlePlayer_slot3.Name = "lbl_singlePlayer_slot3";
-            this.lbl_singlePlayer_slot3.Size = new System.Drawing.Size(57, 30);
-            this.lbl_singlePlayer_slot3.TabIndex = 11;
-            this.lbl_singlePlayer_slot3.Text = "SLOT 3";
-            this.lbl_singlePlayer_slot3.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot3.Location = new System.Drawing.Point(277, 58);
+            this.btn_singlePlayer_slot3.Name = "btn_singlePlayer_slot3";
+            this.btn_singlePlayer_slot3.Size = new System.Drawing.Size(57, 30);
+            this.btn_singlePlayer_slot3.TabIndex = 11;
+            this.btn_singlePlayer_slot3.Text = "SLOT 3";
+            this.btn_singlePlayer_slot3.UseVisualStyleBackColor = true;
             // 
-            // lbl_singlePlayer_slot4
+            // btn_singlePlayer_slot4
             // 
-            this.lbl_singlePlayer_slot4.Location = new System.Drawing.Point(370, 58);
-            this.lbl_singlePlayer_slot4.Name = "lbl_singlePlayer_slot4";
-            this.lbl_singlePlayer_slot4.Size = new System.Drawing.Size(57, 30);
-            this.lbl_singlePlayer_slot4.TabIndex = 12;
-            this.lbl_singlePlayer_slot4.Text = "SLOT 4";
-            this.lbl_singlePlayer_slot4.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot4.Location = new System.Drawing.Point(370, 58);
+            this.btn_singlePlayer_slot4.Name = "btn_singlePlayer_slot4";
+            this.btn_singlePlayer_slot4.Size = new System.Drawing.Size(57, 30);
+            this.btn_singlePlayer_slot4.TabIndex = 12;
+            this.btn_singlePlayer_slot4.Text = "SLOT 4";
+            this.btn_singlePlayer_slot4.UseVisualStyleBackColor = true;
             // 
-            // lbl_singlePlayer_slot5
+            // btn_singlePlayer_slot5
             // 
-            this.lbl_singlePlayer_slot5.Location = new System.Drawing.Point(462, 58);
-            this.lbl_singlePlayer_slot5.Name = "lbl_singlePlayer_slot5";
-            this.lbl_singlePlayer_slot5.Size = new System.Drawing.Size(57, 30);
-            this.lbl_singlePlayer_slot5.TabIndex = 13;
-            this.lbl_singlePlayer_slot5.Text = "SLOT 5";
-            this.lbl_singlePlayer_slot5.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot5.Location = new System.Drawing.Point(462, 58);
+            this.btn_singlePlayer_slot5.Name = "btn_singlePlayer_slot5";
+            this.btn_singlePlayer_slot5.Size = new System.Drawing.Size(57, 30);
+            this.btn_singlePlayer_slot5.TabIndex = 13;
+            this.btn_singlePlayer_slot5.Text = "SLOT 5";
+            this.btn_singlePlayer_slot5.UseVisualStyleBackColor = true;
             // 
-            // lbl_singlePlayer_slot6
+            // btn_singlePlayer_slot6
             // 
-            this.lbl_singlePlayer_slot6.Location = new System.Drawing.Point(556, 58);
-            this.lbl_singlePlayer_slot6.Name = "lbl_singlePlayer_slot6";
-            this.lbl_singlePlayer_slot6.Size = new System.Drawing.Size(57, 30);
-            this.lbl_singlePlayer_slot6.TabIndex = 14;
-            this.lbl_singlePlayer_slot6.Text = "SLOT 6";
-            this.lbl_singlePlayer_slot6.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot6.Location = new System.Drawing.Point(556, 58);
+            this.btn_singlePlayer_slot6.Name = "btn_singlePlayer_slot6";
+            this.btn_singlePlayer_slot6.Size = new System.Drawing.Size(57, 30);
+            this.btn_singlePlayer_slot6.TabIndex = 14;
+            this.btn_singlePlayer_slot6.Text = "SLOT 6";
+            this.btn_singlePlayer_slot6.UseVisualStyleBackColor = true;
             // 
-            // lbl_singlePlayer_slot7
+            // btn_singlePlayer_slot7
             // 
-            this.lbl_singlePlayer_slot7.Location = new System.Drawing.Point(647, 58);
-            this.lbl_singlePlayer_slot7.Name = "lbl_singlePlayer_slot7";
-            this.lbl_singlePlayer_slot7.Size = new System.Drawing.Size(57, 30);
-            this.lbl_singlePlayer_slot7.TabIndex = 15;
-            this.lbl_singlePlayer_slot7.Text = "SLOT 7";
-            this.lbl_singlePlayer_slot7.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot7.Location = new System.Drawing.Point(647, 58);
+            this.btn_singlePlayer_slot7.Name = "btn_singlePlayer_slot7";
+            this.btn_singlePlayer_slot7.Size = new System.Drawing.Size(57, 30);
+            this.btn_singlePlayer_slot7.TabIndex = 15;
+            this.btn_singlePlayer_slot7.Text = "SLOT 7";
+            this.btn_singlePlayer_slot7.UseVisualStyleBackColor = true;
             // 
             // ss_singlePlayer_status
             // 
@@ -199,13 +199,13 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.ss_singlePlayer_status);
-            this.Controls.Add(this.lbl_singlePlayer_slot7);
-            this.Controls.Add(this.lbl_singlePlayer_slot6);
-            this.Controls.Add(this.lbl_singlePlayer_slot5);
-            this.Controls.Add(this.lbl_singlePlayer_slot4);
-            this.Controls.Add(this.lbl_singlePlayer_slot3);
-            this.Controls.Add(this.lbl_singlePlayer_slot2);
-            this.Controls.Add(this.lbl_singlePlayer_slot1);
+            this.Controls.Add(this.btn_singlePlayer_slot7);
+            this.Controls.Add(this.btn_singlePlayer_slot6);
+            this.Controls.Add(this.btn_singlePlayer_slot5);
+            this.Controls.Add(this.btn_singlePlayer_slot4);
+            this.Controls.Add(this.btn_singlePlayer_slot3);
+            this.Controls.Add(this.btn_singlePlayer_slot2);
+            this.Controls.Add(this.btn_singlePlayer_slot1);
             this.Controls.Add(this.panel_singlePlayer_boardPanel);
             this.Controls.Add(this.panel_singlePlayer_top);
             this.Controls.Add(this.btn_singlePlayer_returnToMain);
@@ -229,13 +229,13 @@
         private System.Windows.Forms.Button btn_singlePlayer_returnToMain;
         private System.Windows.Forms.Panel panel_singlePlayer_top;
         private System.Windows.Forms.Panel panel_singlePlayer_boardPanel;
-        private System.Windows.Forms.Button lbl_singlePlayer_slot1;
-        private System.Windows.Forms.Button lbl_singlePlayer_slot2;
-        private System.Windows.Forms.Button lbl_singlePlayer_slot3;
-        private System.Windows.Forms.Button lbl_singlePlayer_slot4;
-        private System.Windows.Forms.Button lbl_singlePlayer_slot5;
-        private System.Windows.Forms.Button lbl_singlePlayer_slot6;
-        private System.Windows.Forms.Button lbl_singlePlayer_slot7;
+        private System.Windows.Forms.Button btn_singlePlayer_slot1;
+        private System.Windows.Forms.Button btn_singlePlayer_slot2;
+        private System.Windows.Forms.Button btn_singlePlayer_slot3;
+        private System.Windows.Forms.Button btn_singlePlayer_slot4;
+        private System.Windows.Forms.Button btn_singlePlayer_slot5;
+        private System.Windows.Forms.Button btn_singlePlayer_slot6;
+        private System.Windows.Forms.Button btn_singlePlayer_slot7;
         private System.Windows.Forms.StatusStrip ss_singlePlayer_status;
         private System.Windows.Forms.ToolStripStatusLabel tssl_singlePlayer_p1;
         private System.Windows.Forms.ToolStripStatusLabel tssl_singlePlayer_p2;

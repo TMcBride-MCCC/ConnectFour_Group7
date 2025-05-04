@@ -74,8 +74,6 @@ namespace ConnectFour_Group7
                         Console.WriteLine("Filling Empty Cell");
                         Brush fillColor = new SolidBrush(cell.CellColor());
                         g.FillEllipse(fillColor, circleContainer);
-                        board[r, c].setPlayerThatFilled("");
-                        board[r, c].setIsEmpty(false);
                     }
                 }
             }
@@ -91,6 +89,38 @@ namespace ConnectFour_Group7
                     board[r, c].setIsEmpty(false);
                 }
             }
+        }
+
+        //Function for checking if a piece can be added
+        public bool isColumnFull(int col)
+        {
+            for (int r = rows - 1; r >= 0; r--)
+            {
+                if (board[r, col].isEmptyCell())
+                {
+                    return false;
+                }
+            }
+            //If the column is full
+            return true;
+        }
+
+        public int getRow(int col)
+        {
+            for (int r = rows - 1; r >= 0; r--)
+            {
+                if (board[r, col].isEmptyCell())
+                {
+                    return r;
+                }
+            }
+            return -1;
+        }
+
+        public void dropPiece(int col, int row, string player)
+        {
+            board[row, col].setPlayerThatFilled(player);
+            board[row, col].setIsEmpty(false);
         }
     }
 }

@@ -46,21 +46,21 @@ namespace ConnectFour_Group7
         //=====================================================================
         //                              FUNCTIONS
         //=====================================================================
-        private void whoseTurnIsIt(int tc)
+        private string whoseTurnIsIt(int tc)
         {
             if (tc % 2 != 0)
             {
                 Console.WriteLine("Player 1's turn");
                 tssl_singlePlayer_p2.Visible = false;
                 tssl_singlePlayer_p1.Visible = true;
-                turnCounter++;
+                return "p1";
             }
             else
             {
                 Console.WriteLine("Player 2's turn");
                 tssl_singlePlayer_p1.Visible = false;
                 tssl_singlePlayer_p2.Visible = true;
-                turnCounter++;
+                return "p2";
             }
         }
 
@@ -81,14 +81,63 @@ namespace ConnectFour_Group7
             welcomeForm.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            whoseTurnIsIt(turnCounter);
-        }
-
         private void panel_singlePlayer_boardPanel_Paint(object sender, PaintEventArgs e)
         {
             board.Draw(e.Graphics, panel_singlePlayer_boardPanel.Width, panel_singlePlayer_boardPanel.Height);
+        }
+
+        private void slotButtonClicked(object sender, EventArgs e)
+        {
+            int col = -1;
+            int row;
+
+            if (sender == btn_singlePlayer_slot1)
+            {
+                col = 0;
+            }
+            else if (sender == btn_singlePlayer_slot2)
+            {
+                col = 1;
+            }
+            else if(sender == btn_singlePlayer_slot3)
+            {
+                col = 2;
+            }
+            else if (sender == btn_singlePlayer_slot4)
+            {
+                col = 3;
+            }
+            else if (sender == btn_singlePlayer_slot5)
+            {
+                col = 4;
+            }
+            else if (sender == btn_singlePlayer_slot6)
+            {
+                col = 5;
+            }
+            else if (sender == btn_singlePlayer_slot7)
+            {
+                col = 6;
+            }
+
+            string player = whoseTurnIsIt(turnCounter);
+            bool columnIsFull = board.isColumnFull(col);
+
+            if (columnIsFull)
+            {
+                MessageBox.Show("Column is full. Play again");
+            }
+            else
+            {
+                row = board.getRow(col);
+                //Make the move
+                board.dropPiece(col, row, player);
+                //Increment the turn
+                turnCounter++;
+                //Refresh the board
+                panel_singlePlayer_boardPanel.Invalidate();
+                whoseTurnIsIt(turnCounter);
+            }
         }
     }
 }
