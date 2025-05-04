@@ -182,6 +182,11 @@ namespace ConnectFour_Group7
             return false;
         }
 
+        private bool checkDraw()
+        {
+            return false;
+        }
+
         private void disableButtons()
         {
             btn_versus_slot1.Enabled = false;
@@ -279,6 +284,10 @@ namespace ConnectFour_Group7
                     //Hide the main form
                     this.Hide();
                 }
+                else if (checkDraw())
+                {
+
+                }
                 else
                 {
                     //Increment the turn
@@ -329,10 +338,6 @@ namespace ConnectFour_Group7
         {
             board.buttonLeave(sender, e);
             panel_versus_boardPanel.Invalidate();
-        }
-
-        private void btn_versus_slot1_Click(object sender, EventArgs e)
-        {
         }
     }
 }
