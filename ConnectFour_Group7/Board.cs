@@ -151,5 +151,10 @@ namespace ConnectFour_Group7
             board[row, col].setPlayerThatFilled(player);
             board[row, col].setIsEmpty(false);
         }
+
+        public Cell getCell(int row, int col)
+        {
+            return board[row, col];
+        }
     }
 }

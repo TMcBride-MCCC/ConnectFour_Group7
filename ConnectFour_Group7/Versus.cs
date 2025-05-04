@@ -57,6 +57,141 @@ namespace ConnectFour_Group7
                 return "p2";
             }
         }
+        private bool checkWin(int row, int col, string player)
+        {
+            //======================
+            //===Horizontal check===
+            //======================
+
+            //Check to the west
+            int westCount = 0;
+            int westCol = col - 1;
+            while (westCol >= 0 && board.getCell(row, westCol).getPlayerThatFilled() == player)
+            {
+                westCount++;
+                westCol--;
+            }
+
+            //Check to the east
+            int eastCount = 0;
+            int eastCol = col + 1;
+            while (eastCol <= 6 && board.getCell(row, eastCol).getPlayerThatFilled() == player)
+            {
+                eastCount++;
+                eastCol++;
+            }
+
+            //Add the counts together and check for total count
+            if((westCount + eastCount + 1) >= 4)
+            {
+                return true;
+            }
+
+            //======================
+            //====Vertical check====
+            //======================
+
+            //Check to the north
+            int northCount = 0;
+            int northRow = row - 1;
+            while (northRow >= 0 && board.getCell(northRow, col).getPlayerThatFilled() == player)
+            {
+                northCount++;
+                northRow--;
+            }
+
+            //Check to the south
+            int southCount = 0;
+            int southRow = row + 1;
+            while (southRow <= 5 && board.getCell(southRow, col).getPlayerThatFilled() == player)
+            {
+                southCount++;
+                southRow++;
+            }
+
+            //Add the counts together and check for total count
+            if ((northCount + southCount + 1) >= 4)
+            {
+                return true;
+            }
+
+            //=========================
+            //====Diagonal check #1====
+            //=========================
+
+            //Check to the NW
+            int nwCount = 0;
+            int nwCol = col - 1;
+            int nwRow = row - 1;
+            while (nwRow >= 0 && nwCol >= 0 && board.getCell(nwRow, nwCol).getPlayerThatFilled() == player)
+            {
+                nwCount++;
+                nwRow--;
+                nwCol--;
+            }
+
+            //Check to the SW
+            int swCount = 0;
+            int swCol = col - 1;
+            int swRow = row + 1;
+            while (swRow <= 5 && swCol >= 0 && board.getCell(swRow, swCol).getPlayerThatFilled() == player)
+            {
+                swCount++;
+                swRow++;
+                swCol--;
+            }
+
+            //Add the counts together and check for total count
+            if ((nwCount + swCount + 1) >= 4)
+            {
+                return true;
+            }
+
+            //=========================
+            //====Diagonal check #2====
+            //=========================
+
+            //Check to the NE
+            int neCount = 0;
+            int neCol = col + 1;
+            int neRow = row - 1;
+            while (neRow >= 0 && neCol <= 6 && board.getCell(neRow, neCol).getPlayerThatFilled() == player)
+            {
+                neCount++;
+                neRow--;
+                neCol++;
+            }
+
+            //Check to the SE
+            int seCount = 0;
+            int seCol = col + 1;
+            int seRow = row + 1;
+            while (seRow <= 5 && seCol <= 6 && board.getCell(seRow, seCol).getPlayerThatFilled() == player)
+            {
+                seCount++;
+                seRow++;
+                seCol++;
+            }
+
+            //Add the counts together and check for total count
+            if ((neCount + seCount + 1) >= 4)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void disableButtons()
+        {
+            btn_versus_slot1.Enabled = false;
+            btn_versus_slot2.Enabled = false;
+            btn_versus_slot3.Enabled = false;
+            btn_versus_slot4.Enabled = false;
+            btn_versus_slot5.Enabled = false;
+            btn_versus_slot6.Enabled = false;
+            btn_versus_slot7.Enabled = false;
+        }
 
         //=====================================================================
         //                              ACTIONS
@@ -79,6 +214,7 @@ namespace ConnectFour_Group7
         {
             board.Draw(e.Graphics, panel_versus_boardPanel.Width, panel_versus_boardPanel.Height);
         }
+
         private void slotButtonClicked(object sender, EventArgs e)
         {
             int col = -1;
@@ -125,11 +261,23 @@ namespace ConnectFour_Group7
                 row = board.getRow(col);
                 //Make the move
                 board.dropPiece(col, row, player);
-                //Increment the turn
-                turnCounter++;
                 //Refresh the board
                 panel_versus_boardPanel.Invalidate();
-                whoseTurnIsIt(turnCounter);
+                //Check for a win
+                if (checkWin(row, col, player))
+                {
+                    //Temporary display that this function is working
+                    //After we determine it is working this will be replaced with a form
+                    MessageBox.Show(player + " Won!");
+                    //Disable all buttons
+                    disableButtons();
+                }
+                else
+                {
+                    //Increment the turn
+                    turnCounter++;
+                    whoseTurnIsIt(turnCounter);
+                }
             }
         }
         private void hover(object sender, EventArgs e)

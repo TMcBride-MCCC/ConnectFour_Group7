@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConnectFour_Group7
 {
-    internal class Cell
+    public class Cell
     {
         private int row;
         private int col;
