@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -27,8 +28,8 @@ namespace ConnectFour_Group7
 
             //loads board image
             string imagePath = Path.Combine(Application.StartupPath, "Resources", "BoardBG.jpg");
-            panel_singlePlayer_boardPanel.BackgroundImage = Image.FromFile(imagePath);
-            panel_singlePlayer_boardPanel.BackgroundImageLayout = ImageLayout.Stretch;
+            panel_versus_boardPanel.BackgroundImage = Image.FromFile(imagePath);
+            panel_versus_boardPanel.BackgroundImageLayout = ImageLayout.Stretch;
 
             //Variable to house the form passed for reference later
             //Needed to return to the Main Menu
@@ -57,7 +58,29 @@ namespace ConnectFour_Group7
 
         private void panel_singlePlayer_boardPanel_Paint_1(object sender, PaintEventArgs e)
         {
-            board.Draw(e.Graphics, panel_singlePlayer_boardPanel.Width, panel_singlePlayer_boardPanel.Height);
+            board.Draw(e.Graphics, panel_versus_boardPanel.Width, panel_versus_boardPanel.Height);
+        }
+        private void hover(object sender, EventArgs e)
+        {
+            if (sender == btn_versus_slot1) //shows predetermined move
+            {
+                board.buttonHover(0);
+                panel_versus_boardPanel.Invalidate();
+            }
+            else if (sender == btn_versus_slot2)
+            {
+                board.buttonHover(1);
+                panel_versus_boardPanel.Invalidate();
+            }
+        }
+        private void leaveHover(object sender, EventArgs e) //redraws board after mouse hover
+        {
+            board.buttonLeave(sender, e);
+            panel_versus_boardPanel.Invalidate();
+        }
+
+        private void btn_versus_slot1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -14,6 +14,8 @@ namespace ConnectFour_Group7
         private const int padding = 2;
         private const int marginTop = 25;
         private const int marginBottom = 25;
+        private int highlightRow = -1;
+        private int highlightCol = -1;
         private Cell[,] board;
 
 
@@ -75,8 +77,35 @@ namespace ConnectFour_Group7
                         Brush fillColor = new SolidBrush(cell.CellColor());
                         g.FillEllipse(fillColor, circleContainer);
                     }
+                    if (highlightRow == r && highlightCol == c) //makes transparent circle to show move before user registers
+                    {
+                        using (Brush highlight = new SolidBrush(Color.FromArgb(128, Color.Red)))
+                        {
+                            g.FillEllipse(highlight, circleContainer);
+                        }
+                    }
                 }
             }
+        }
+        public void buttonHover(int column)
+        {
+            highlightRow = -1; //no intial highlight
+            highlightCol = -1;
+
+            for (int row = 5; row >= 0; row--) //loops bottom row up to top in set column
+            {
+                if (board[row, column].isEmptyCell()) //finds first empty cell from the bottom
+                {
+                    highlightRow = row;
+                    highlightCol = column;
+                    break;
+                }
+            }
+        }
+        public void buttonLeave(object sender, EventArgs e)
+        {
+            highlightRow = -1;
+            highlightCol = -1;
         }
 
         public void fillTest()

@@ -107,6 +107,8 @@
             this.btn_singlePlayer_slot1.Text = "SLOT 1";
             this.btn_singlePlayer_slot1.UseVisualStyleBackColor = true;
             this.btn_singlePlayer_slot1.Click += new System.EventHandler(this.slotButtonClicked);
+            this.btn_singlePlayer_slot1.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_singlePlayer_slot1.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_singlePlayer_slot2
             // 
@@ -116,6 +118,8 @@
             this.btn_singlePlayer_slot2.TabIndex = 10;
             this.btn_singlePlayer_slot2.Text = "SLOT 2";
             this.btn_singlePlayer_slot2.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot2.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_singlePlayer_slot2.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_singlePlayer_slot3
             // 
@@ -188,7 +192,7 @@
             this.tssl_singlePlayer_p2.BackColor = System.Drawing.Color.Yellow;
             this.tssl_singlePlayer_p2.ForeColor = System.Drawing.Color.Black;
             this.tssl_singlePlayer_p2.Name = "tssl_singlePlayer_p2";
-            this.tssl_singlePlayer_p2.Size = new System.Drawing.Size(84, 17);
+            this.tssl_singlePlayer_p2.Size = new System.Drawing.Size(83, 17);
             this.tssl_singlePlayer_p2.Text = "Player 2\'s Turn";
             this.tssl_singlePlayer_p2.Visible = false;
             // 

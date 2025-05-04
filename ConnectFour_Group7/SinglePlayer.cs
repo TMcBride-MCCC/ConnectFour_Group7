@@ -139,5 +139,23 @@ namespace ConnectFour_Group7
                 whoseTurnIsIt(turnCounter);
             }
         }
+        private void hover(object sender, EventArgs e)
+        {
+            if (sender == btn_singlePlayer_slot1) //shows predetermined move
+            {
+                board.buttonHover(0);
+                panel_singlePlayer_boardPanel.Invalidate();
+            }
+            else if (sender == btn_singlePlayer_slot2)
+            {
+                board.buttonHover(1);
+                panel_singlePlayer_boardPanel.Invalidate();
+            }
+        }
+        private void leaveHover(object sender, EventArgs e) //redraws board after mouse hover
+        {
+            board.buttonLeave(sender, e);
+            panel_singlePlayer_boardPanel.Invalidate();
+        }
     }
 }
