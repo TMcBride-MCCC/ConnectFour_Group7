@@ -222,6 +222,7 @@
             this.Controls.Add(this.panel_singlePlayer_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Versus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Versus";
             this.panel_singlePlayer_top.ResumeLayout(false);
             this.panel_singlePlayer_top.PerformLayout();
