@@ -129,6 +129,8 @@
             this.btn_singlePlayer_slot3.TabIndex = 11;
             this.btn_singlePlayer_slot3.Text = "SLOT 3";
             this.btn_singlePlayer_slot3.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot3.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_singlePlayer_slot3.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_singlePlayer_slot4
             // 
@@ -138,6 +140,8 @@
             this.btn_singlePlayer_slot4.TabIndex = 12;
             this.btn_singlePlayer_slot4.Text = "SLOT 4";
             this.btn_singlePlayer_slot4.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot4.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_singlePlayer_slot4.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_singlePlayer_slot5
             // 
@@ -147,6 +151,8 @@
             this.btn_singlePlayer_slot5.TabIndex = 13;
             this.btn_singlePlayer_slot5.Text = "SLOT 5";
             this.btn_singlePlayer_slot5.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot5.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_singlePlayer_slot5.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_singlePlayer_slot6
             // 
@@ -156,6 +162,8 @@
             this.btn_singlePlayer_slot6.TabIndex = 14;
             this.btn_singlePlayer_slot6.Text = "SLOT 6";
             this.btn_singlePlayer_slot6.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot6.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_singlePlayer_slot6.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_singlePlayer_slot7
             // 
@@ -165,6 +173,8 @@
             this.btn_singlePlayer_slot7.TabIndex = 15;
             this.btn_singlePlayer_slot7.Text = "SLOT 7";
             this.btn_singlePlayer_slot7.UseVisualStyleBackColor = true;
+            this.btn_singlePlayer_slot7.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_singlePlayer_slot7.MouseHover += new System.EventHandler(this.hover);
             // 
             // ss_singlePlayer_status
             // 

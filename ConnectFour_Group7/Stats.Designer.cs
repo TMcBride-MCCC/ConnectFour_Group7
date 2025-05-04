@@ -268,6 +268,7 @@
             this.Controls.Add(this.btn_stats_exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Stats";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stats";
             this.panel_Stats_top.ResumeLayout(false);
             this.panel_Stats_top.PerformLayout();

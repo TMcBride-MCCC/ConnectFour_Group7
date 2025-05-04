@@ -76,6 +76,8 @@
             this.btn_versus_slot7.Text = "SLOT 7";
             this.btn_versus_slot7.UseVisualStyleBackColor = true;
             this.btn_versus_slot7.Click += new System.EventHandler(this.slotButtonClicked);
+            this.btn_versus_slot7.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_versus_slot7.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_versus_slot6
             // 
@@ -86,6 +88,8 @@
             this.btn_versus_slot6.Text = "SLOT 6";
             this.btn_versus_slot6.UseVisualStyleBackColor = true;
             this.btn_versus_slot6.Click += new System.EventHandler(this.slotButtonClicked);
+            this.btn_versus_slot6.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_versus_slot6.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_versus_slot5
             // 
@@ -96,6 +100,8 @@
             this.btn_versus_slot5.Text = "SLOT 5";
             this.btn_versus_slot5.UseVisualStyleBackColor = true;
             this.btn_versus_slot5.Click += new System.EventHandler(this.slotButtonClicked);
+            this.btn_versus_slot5.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_versus_slot5.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_versus_slot4
             // 
@@ -106,6 +112,8 @@
             this.btn_versus_slot4.Text = "SLOT 4";
             this.btn_versus_slot4.UseVisualStyleBackColor = true;
             this.btn_versus_slot4.Click += new System.EventHandler(this.slotButtonClicked);
+            this.btn_versus_slot4.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_versus_slot4.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_versus_slot3
             // 
@@ -116,6 +124,8 @@
             this.btn_versus_slot3.Text = "SLOT 3";
             this.btn_versus_slot3.UseVisualStyleBackColor = true;
             this.btn_versus_slot3.Click += new System.EventHandler(this.slotButtonClicked);
+            this.btn_versus_slot3.MouseLeave += new System.EventHandler(this.leaveHover);
+            this.btn_versus_slot3.MouseHover += new System.EventHandler(this.hover);
             // 
             // btn_versus_slot2
             // 
@@ -198,7 +208,7 @@
             this.tssl_versus_p2.BackColor = System.Drawing.Color.Yellow;
             this.tssl_versus_p2.ForeColor = System.Drawing.Color.Black;
             this.tssl_versus_p2.Name = "tssl_versus_p2";
-            this.tssl_versus_p2.Size = new System.Drawing.Size(84, 17);
+            this.tssl_versus_p2.Size = new System.Drawing.Size(83, 17);
             this.tssl_versus_p2.Text = "Player 2\'s Turn";
             this.tssl_versus_p2.Visible = false;
             // 

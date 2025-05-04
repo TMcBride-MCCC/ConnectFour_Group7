@@ -151,6 +151,31 @@ namespace ConnectFour_Group7
                 board.buttonHover(1);
                 panel_singlePlayer_boardPanel.Invalidate();
             }
+            else if (sender == btn_singlePlayer_slot3)
+            {
+                board.buttonHover(2);
+                panel_singlePlayer_boardPanel.Invalidate();
+            }
+            else if (sender == btn_singlePlayer_slot4)
+            {
+                board.buttonHover(3);
+                panel_singlePlayer_boardPanel.Invalidate();
+            }
+            else if (sender == btn_singlePlayer_slot5)
+            {
+                board.buttonHover(4);
+                panel_singlePlayer_boardPanel.Invalidate();
+            }
+            else if (sender == btn_singlePlayer_slot6)
+            {
+                board.buttonHover(5);
+                panel_singlePlayer_boardPanel.Invalidate();
+            }
+            else if (sender == btn_singlePlayer_slot7)
+            {
+                board.buttonHover(6);
+                panel_singlePlayer_boardPanel.Invalidate();
+            }
         }
         private void leaveHover(object sender, EventArgs e) //redraws board after mouse hover
         {

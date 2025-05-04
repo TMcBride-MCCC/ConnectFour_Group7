@@ -79,7 +79,7 @@ namespace ConnectFour_Group7
                     }
                     if (highlightRow == r && highlightCol == c) //makes transparent circle to show move before user registers
                     {
-                        using (Brush highlight = new SolidBrush(Color.FromArgb(128, Color.Red)))
+                        using (Brush highlight = new SolidBrush(Color.FromArgb(128, Color.Black)))
                         {
                             g.FillEllipse(highlight, circleContainer);
                         }

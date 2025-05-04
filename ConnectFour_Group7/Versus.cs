@@ -299,6 +299,31 @@ namespace ConnectFour_Group7
                 board.buttonHover(1);
                 panel_versus_boardPanel.Invalidate();
             }
+            else if (sender == btn_versus_slot3)
+            {
+                board.buttonHover(2);
+                panel_versus_boardPanel.Invalidate();
+            }
+            else if (sender == btn_versus_slot4)
+            {
+                board.buttonHover(3);
+                panel_versus_boardPanel.Invalidate();
+            }
+            else if (sender == btn_versus_slot5)
+            {
+                board.buttonHover(4);
+                panel_versus_boardPanel.Invalidate();
+            }
+            else if (sender == btn_versus_slot6)
+            {
+                board.buttonHover(5);
+                panel_versus_boardPanel.Invalidate();
+            }
+            else if (sender == btn_versus_slot7)
+            {
+                board.buttonHover(6);
+                panel_versus_boardPanel.Invalidate();
+            }
         }
         private void leaveHover(object sender, EventArgs e) //redraws board after mouse hover
         {
