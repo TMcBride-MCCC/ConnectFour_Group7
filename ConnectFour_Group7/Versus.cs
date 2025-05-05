@@ -19,7 +19,7 @@ namespace ConnectFour_Group7
         //Make a Board varialbe to point to
         private Board board;
         private Stats stats;
-        private int turnCounter = 1;
+        private int turnCounter = 42;
         public Versus(Welcome wf)
         {
             InitializeComponent();
@@ -186,7 +186,16 @@ namespace ConnectFour_Group7
 
         private bool checkDraw()
         {
-            return false;
+            if (turnCounter >= 42)
+            {
+                disableButtons();  //disables all button
+                GameOver gameOverForm = new GameOver(board, "Draw", welcomeForm, stats);
+                gameOverForm.Show(); //shows game over form
+                this.Hide();  // Hide the current form
+                return true; //tie game
+            }
+
+            return false; //not a tie...yet
         }
 
         private void disableButtons()
