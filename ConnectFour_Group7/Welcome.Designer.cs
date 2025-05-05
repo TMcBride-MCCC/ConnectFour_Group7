@@ -116,6 +116,7 @@
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             this.panel_welcome_top.ResumeLayout(false);
             this.panel_welcome_top.PerformLayout();
             this.ResumeLayout(false);

@@ -18,6 +18,7 @@ namespace ConnectFour_Group7
         private Welcome welcomeForm;
         //Make a Board varialbe to point to
         private Board board;
+        private Stats stats;
         private int turnCounter = 1;
         public Versus(Welcome wf)
         {
@@ -25,6 +26,7 @@ namespace ConnectFour_Group7
 
             //Initialize the board
             board = new Board();
+            stats = new Stats(wf);
 
             //loads board image
             string imagePath = Path.Combine(Application.StartupPath, "Resources", "BoardBG.jpg");
@@ -278,7 +280,7 @@ namespace ConnectFour_Group7
                     disableButtons();
                     //Make an instance of the Versus Form to point to
                     //Pass it this form to come back to
-                    GameOver gameOverForm = new GameOver(board, player, welcomeForm);
+                    GameOver gameOverForm = new GameOver(board, player, welcomeForm, stats);
                     //Show the Versus form
                     gameOverForm.Show();
                     //Hide the main form

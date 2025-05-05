@@ -64,5 +64,10 @@ namespace ConnectFour_Group7
             //This works because this is an exit from the main form
             Application.Exit();
         }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,22 +16,26 @@ namespace ConnectFour_Group7
         private Board lastBoard;
         private string winner;
         private Welcome welcomeForm;
+        private Stats results;
 
-        public GameOver(Board previousGameBoard, string playerWhoWon, Welcome wf)
+        public GameOver(Board previousGameBoard, string playerWhoWon, Welcome wf, Stats stats)
         {
             InitializeComponent();
 
             lastBoard = previousGameBoard;
             winner = playerWhoWon;
             welcomeForm = wf;
+            results = stats;
 
             if (playerWhoWon == "p1")
             {
                 lbl_gameOver_winner.Text = "Winner: Player 1";
+                results.addWinP1();
             }
             else if (playerWhoWon == "p2")
             {
                 lbl_gameOver_winner.Text = "Winner: Player 2";
+                results.addWinP2();
             }
             else if (playerWhoWon == "ai")
             {
@@ -40,7 +44,9 @@ namespace ConnectFour_Group7
             else
             {
                 lbl_gameOver_winner.Text = "The game was a draw";
+                results.addTie();
             }
+            results.updateLabels();
         }
         //=====================================================================
         //                              ACTIONS
@@ -76,6 +82,11 @@ namespace ConnectFour_Group7
             versusForm.Show();
             //Hide the main form
             this.Hide();
+        }
+
+        private void GameOver_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

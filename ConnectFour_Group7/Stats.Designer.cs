@@ -270,6 +270,7 @@
             this.Name = "Stats";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stats";
+            this.Load += new System.EventHandler(this.Stats_Load);
             this.panel_Stats_top.ResumeLayout(false);
             this.panel_Stats_top.PerformLayout();
             this.ResumeLayout(false);

@@ -18,7 +18,7 @@ namespace ConnectFour_Group7
         //Make a Board varialbe to point to
         private Board board;
         //Variable for players
-        private string player = "";
+        //private string player = "";
         //Variable counter for whose turn it is
         //Initial turn variable
         private int turnCounter = 1;
